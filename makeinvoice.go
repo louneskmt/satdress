@@ -58,8 +58,9 @@ func makeInvoice(
 	}
 
 	mip := makeinvoice.Params{
-		Msatoshi: int64(msat),
-		Backend:  backend,
+		Msatoshi:    int64(msat),
+		Backend:     backend,
+		TorProxyURL: s.TorProxyURL,
 
 		Label: s.Domain + "/" + strconv.FormatInt(time.Now().Unix(), 16),
 	}

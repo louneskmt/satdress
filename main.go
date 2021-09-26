@@ -24,6 +24,7 @@ type Settings struct {
 	SiteOwnerName string `envconfig:"SITE_OWNER_NAME" required:"true"`
 	SiteOwnerURL  string `envconfig:"SITE_OWNER_URL" required:"true"`
 	SiteName      string `envconfig:"SITE_NAME" required:"true"`
+	TorProxyURL   string `envconfig:"TOR_PROXY_URL" default:"socks5://127.0.0.1:9050"`
 }
 
 var s Settings
